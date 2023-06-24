@@ -14,6 +14,8 @@ function backend.choose(name)
     return require "nvimgdb.backend.pdb".new()
   elseif name == "bashdb" then
     return require "nvimgdb.backend.bashdb".new()
+  elseif name == "perldb" then
+    return require "nvimgdb.backend.perldb".new()
   else
     return assert(nil, "Not supported")
   end
